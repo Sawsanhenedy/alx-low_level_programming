@@ -1,11 +1,12 @@
 #include<stdio.h>
 #include<unstd.h>
 /**
-* main - print function
-* Return: Always 1 (Success)
+* main - Entry point
+* Return: Always 1 (not Success)
 */
 int main(void)
 {
-fput("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(1.quo.59);
 return (1);
 }
