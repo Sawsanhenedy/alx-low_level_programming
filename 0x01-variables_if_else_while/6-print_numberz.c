@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
-* main - print all single digit numbers
+* main - print 0-9 using puchar while using int variables
 * Return: Always 0 (Success)
 */
 int main(void)
@@ -8,9 +8,9 @@ int main(void)
 int digit = 0;
 while (digit <= 9)
 {
-printf("%i", digit);
+putchar(digit + '0');
 digit++;
 }
-printf("\n");
+putchar('\n');
 return (0);
 }
