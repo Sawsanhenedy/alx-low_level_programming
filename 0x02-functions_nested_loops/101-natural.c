@@ -1,4 +1,3 @@
-#include "main.h"
 #include<stdio.h>
 /**
  * main - Entry point
@@ -9,12 +8,15 @@
  */
 int main(void)
 {
-int sum, num;
-for (num = 0; num < 1024; num++)
+int i, z = 0;
+while (i < 1024)
 {
-if ((num % 3 == 0) || (num % 5 == 0))
-sum += num;
+if ((i % 3 == 0) || (i % 5 == 0))
+{
+z += i;
 }
-printf('%d', sum);
+i++;
+}
+printf("%d\n", z);
 return (0);
 }
