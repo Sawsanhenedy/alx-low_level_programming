@@ -7,16 +7,11 @@
  */
 char *_strcat(char *dest, char *src)
 {
-int length_of_string, s;
-length_of_string = 0;
-while (dest[length_of_string != '\0'])
-{
-length_of_string++;
-}
-for (s = 0; src[s] != '\0'; s++, length_of_string++)
-{
-dest[length_of_string] = src[s];
-}
-dest[length_of_string] = '\0';
+int c, c2;
+c = 0;
+while (dest[c])
+c++;
+for (c2 = 0; src[c2]; c2++)
+dest[c++] = src[c2];
 return (dest);
 }
