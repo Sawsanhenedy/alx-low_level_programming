@@ -23,7 +23,7 @@ int a = 0;
 if (*s1 == 0)
 return (0);
 if (*s1 == *s2)
-a += wildcamp(s1 + 1, s2 + 1);
+a += wildcmp(s1 + 1, s2 + 1);
 a += ma_re(s1 + 1, s2);
 return (a);
 }
