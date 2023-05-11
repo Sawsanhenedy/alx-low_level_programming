@@ -38,5 +38,5 @@ return (1);
 else if (s[start] != s[finish])
 return (0);
 else
-return (check(s, start + 1, end - 1, mod));
+return (check(s, start + 1, finish - 1, mod));
 }
