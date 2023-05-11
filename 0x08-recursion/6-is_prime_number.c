@@ -17,7 +17,7 @@ return (check_prime(n, 2));
  * @othern: integer
  * Return: integer
  */
-int check_prime(int n, int othern);
+int check_prime(int n, int othern)
 {
 if (othern >= n && n > 1)
 return (1);
