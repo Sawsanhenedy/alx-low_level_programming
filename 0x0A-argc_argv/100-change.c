@@ -30,7 +30,6 @@ while (n >= coins[a])
 res++;
 n -= coins[a];
 }
-}
 printf("%d\n", res);
 return (0);
 }
