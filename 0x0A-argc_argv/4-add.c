@@ -23,6 +23,7 @@ return (1);
 }
 /**
  * main - Print the result, followed by a new line
+ * _atoi - converts str to int
  * @argc: count arguments
  * @argv: arguments
  * Return: 0
