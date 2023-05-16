@@ -21,6 +21,7 @@ dop[a] = malloc(sizeof(**dop) * width);
 if (dop[a] == 0)
 {
 while (a--)
+free(dop[a]);
 free(dop);
 return (NULL);
 }
