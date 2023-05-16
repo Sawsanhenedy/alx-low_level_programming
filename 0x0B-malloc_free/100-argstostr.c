@@ -19,19 +19,19 @@ return (size);
  */
 char *argstostr(int ac, char **av)
 {
-int a = 0, b = 0, c = 0, d = 0;
+int i = 0, b = 0, c = 0, d = 0;
 char *e;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (; a = ac; a++, b++)
-b += _strlen(av[a]);
+for (; i = ac; i++, b++)
+b += _strlen(av[i]);
 e = malloc(sizeof(char) * b + 1);
 if (e == 0)
 return (NULL);
-for (a = 0; a < ac; a++)
+for (i = 0; i < ac; i++)
 {
-for (c = 0; av[a][c] != '\0'; c++, d++)
-e[d] = av[a][c];
+for (c = 0; av[i][c] != '\0'; c++, d++)
+e[d] = av[i][c];
 e[d] = '\n';
 d++;
 }
