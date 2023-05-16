@@ -1,40 +1,37 @@
 #include"main.h"
-/**
- * _strlen - length of string
- * @a: string
- * Return: int
- */
-int _strlen(char *a)
-{
-int size = 0;
-for (; a[size] != '\0'; size++)
-;
-return (size);
-}
+#include<stdlib.h>
 /**
  * *argstostr - concatenates all the arguments of your program
  * @ac: int
- * @av: arguments
- * Return: string
+ * @av: array
+ * Return: 0
  */
 char *argstostr(int ac, char **av)
 {
-int i = 0, b = 0, c = 0, d = 0;
+int a, b, c = 0, d = 0;
 char *e;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (; i = ac; i++, b++)
-b += _strlen(av[i]);
-e = malloc(sizeof(char) * b + 1);
-if (e == 0)
-return (NULL);
-for (i = 0; i < ac; i++)
+for (a = 0; a < ac; a++)
 {
-for (c = 0; av[i][c] != '\0'; c++, d++)
-e[d] = av[i][c];
-e[d] = '\n';
+for (b = 0; av[a][b]; b++)
 d++;
 }
-e[d] = '\0';
+d += ac;
+e = malloc(sizeof(char) * d + 1);
+if (e == NULL)
+return (NULL);
+for (a = 0; a < ac; a++)
+{
+for (b = 0; av[a][b]; b++)
+{
+e[c] = av[a][b];
+c++;
+}
+if (e[c] == '\0')
+{
+e[c++] = '\n';
+}
+}
 return (e);
 }
