@@ -17,7 +17,7 @@ if (argc != 2)
 printf("Error\n");
 return (1);
 }
-n = atoi(argv[1]);
+n = _atoi(argv[1]);
 res = 0;
 if (n < 0)
 {
