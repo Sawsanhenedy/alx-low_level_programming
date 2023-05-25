@@ -30,6 +30,6 @@ if ((*op == '/' && number2 == 0) || (*op == '%' && number2 == 0))
 printf("Error\n");
 exit(100);
 }
-printf("%d\n", get_op_func(op)(number1, number2));
+printf("%s\n", get_op_func(op)(number1, number2));
 return (0);
 }
