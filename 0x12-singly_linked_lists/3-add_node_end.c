@@ -18,16 +18,16 @@ l++;
 n = malloc(sizeof(list_t));
 if (!n)
 return (NULL);
-n->s = strdup(str);
-n->l = l;
-n->nx = NULL;
+n->str = strdup(str);
+n->len = l;
+n->next = NULL;
 if (*head == NULL)
 {
 *head = n;
 return (n);
 }
-while (t->nx)
-t = t->nx;
-t->nx = n;
+while (t->next)
+t = t->next;
+t->next = n;
 return (n);
 }

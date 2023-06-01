@@ -11,7 +11,7 @@ size_t a = 0;
 while (h)
 {
 a++;
-h = h->nx;
+h = h->next;
 }
 return (a);
 }

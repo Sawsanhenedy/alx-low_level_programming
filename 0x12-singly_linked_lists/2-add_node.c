@@ -16,9 +16,9 @@ l++;
 n = malloc(sizeof(list_t));
 if (!n)
 return (NULL);
-n->s = strdup(str);
-n->l = l;
-n->nx = (*head);
+n->str = strdup(str);
+n->len = l;
+n->next = (*head);
 (*head) = n;
 return (*head);
 }
