@@ -13,7 +13,7 @@ while (h)
 if (!h->s)
 printf("[0] (nil)\n");
 else
-printf("[%u] %s\n, h->l, h->s");
+printf("[%u] %s\n", h->l, h->s);
 h = h->nx;
 f++;
 }
