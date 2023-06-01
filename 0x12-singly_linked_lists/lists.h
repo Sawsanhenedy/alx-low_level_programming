@@ -10,9 +10,9 @@
  */
 typedef struct list_a
 {
-char *s;
-unsigned int l;
-struct list_a *nx;
+char *str;
+unsigned int len;
+struct list_a *next;
 } list_t;
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
