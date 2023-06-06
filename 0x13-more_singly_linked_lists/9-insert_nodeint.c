@@ -23,7 +23,7 @@ return (nw_nd);
 nd = *head;
 while (nd)
 {
-if ( a == idx - 1)
+if (a == idx - 1)
 {
 nw_nd->next = nd->next;
 nd->next = nw_nd;
