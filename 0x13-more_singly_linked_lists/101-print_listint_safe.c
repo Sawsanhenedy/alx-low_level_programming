@@ -8,21 +8,21 @@
  * @n: new
  * Return: new pointer
  */
-const listint_t **_r(const listint_t **l, size_t s, const listint_t *n)
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
-const listint_t *nw_l;
+const listint_t *nw_ls;
 size_t a;
-nw_l = malloc(s * sizeof(listint_t *));
-if (nw_l == NULL)
+nw_ls = malloc(size * sizeof(listint_t *));
+if (nw_ls == NULL)
 {
-free(l);
+free(list);
 exit(98);
 }
-for (a = 0; a < s - 1; a++)
-nw_l[a] = l[a];
-nw_l[a] = new;
-free(l);
-return (nw_l);
+for (a = 0; a < sz - 1; a++)
+nw_ls[a] = *list[a];
+nw_ls[a] = *new;
+free(list);
+return (nw_ls);
 }
 /**
  * print_listint_safe - prints a listint_t linked list
@@ -32,23 +32,23 @@ return (nw_l);
 size_t print_listint_safe(const listint_t *head)
 {
 size_t a, number = 0;
-const listint_t **l = NULL;
+const listint_t **ls = NULL;
 while (head != NULL)
 {
 for (a = 0; a < number; a++)
 {
-if (head == l[a])
+if (head == ls[a])
 {
 printf("-> [%p] %d\n", (void *)head, head->n);
-free(l);
+free(ls);
 return (number);
 }
 }
 number++;
-l = _r(l, number, head);
+ls = _r(ls, number, head);
 printf("[%p] %d\n", (void *)head, head->n);
 head = head->next;
 }
-free(l);
+free(ls);
 return (number);
 }
