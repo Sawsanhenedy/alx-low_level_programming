@@ -27,7 +27,7 @@ break;
 case ELFCLASS32:
 printf("ELF32");
 break;
-case ELFNONE:
+case EV_NONE:
 printf("NONE");
 break;
 }
